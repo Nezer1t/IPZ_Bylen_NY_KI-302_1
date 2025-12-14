@@ -1,0 +1,72 @@
+﻿<Window
+    Height="500"
+    MaxHeight="500"
+    MaxWidth="800"
+    MinHeight="500"
+    MinWidth="800"
+    Title="Авторизація"
+    Width="800"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d"
+    x:Class="lab2_3.Pages.AuthPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:lab2_3"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Window.Resources>
+        <ResourceDictionary Source="../styles.xaml" />
+    </Window.Resources>
+    <Grid Margin="20">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,0,0,20"
+                Text="Авторизація" />
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="400">
+                <StackPanel Margin="0,0,0,20" Orientation="Horizontal">
+                    <Label
+                        Content="Логін"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center" />
+                    <TextBox
+                        Height="40"
+                        Margin="20,0,0,0"
+                        Text="{Binding Login}"
+                        TextWrapping="Wrap"
+                        VerticalContentAlignment="Center"
+                        Width="300" />
+                </StackPanel>
+                <StackPanel Margin="0,0,0,20" Orientation="Horizontal">
+                    <Label
+                        Content="Пароль"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center" />
+                    <TextBox
+                        Height="40"
+                        Margin="20,0,0,0"
+                        Text="{Binding Password}"
+                        TextWrapping="Wrap"
+                        VerticalContentAlignment="Center"
+                        Width="300" />
+                </StackPanel>
+            </StackPanel>
+            <TextBlock
+                HorizontalAlignment="Right"
+                Margin="0,0,0,20"
+                MouseLeftButtonDown="GoToSignUp"
+                Text="Не маєте акаунту? Зареєструйтеся" />
+            <Button
+                Click="AuthClick"
+                Content="Залогінитись"
+                Height="45"
+                HorizontalAlignment="Center"
+                Width="200" />
+        </StackPanel>
+    </Grid>
+</Window>
